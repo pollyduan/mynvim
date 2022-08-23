@@ -26,6 +26,7 @@ nnoremap <leader>Q :q<cr>
 nnoremap <leader>C :e ${MYVIMRC}<cr>
 nnoremap <leader>E :CocCommand explorer<cr>
 nnoremap <leader>R :source ${MYVIMRC}<cr>
+nnoremap <leader>N :set norelativenumber<cr>
 inoremap jk <Esc>
 
 "==
