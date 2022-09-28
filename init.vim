@@ -48,6 +48,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'preservim/nerdtree'
 Plug 'SirVer/ultisnips'
 Plug 'scrooloose/nerdcommenter'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 
