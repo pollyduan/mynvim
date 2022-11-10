@@ -15,6 +15,7 @@ set cursorline                " show line under line of cursor
 set smartcase                 " Exact matching priority
 set ignorecase                " search ignore case
 set wildmenu                  " command pattern completion via TAB
+set scrolloff=5
 "set clipboard=unnamedplus     " share system clipboard
 
 "let mapleader = ','    " set leader key 
