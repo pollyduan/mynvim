@@ -1,6 +1,6 @@
 syntax on
 set nocompatible
-"set nu
+set number
 set relativenumber
 set tabstop=2
 set softtabstop=2
@@ -35,6 +35,7 @@ inoremap jk <Esc>
 "==
 call plug#begin("~/.config/nvim/plugged")
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'npm install'}
 Plug 'gcmt/wildfire.vim'
 Plug 'tpope/vim-surround'
@@ -50,8 +51,18 @@ Plug 'preservim/nerdtree'
 Plug 'SirVer/ultisnips'
 Plug 'scrooloose/nerdcommenter'
 Plug 'mattn/emmet-vim'
+Plug 'jlanzarotta/bufexplorer'
 call plug#end()
 
+"==== buffers
+nmap <S-Tab> :bprev<Return>
+nmap <Tab> :bnext<Return>
+
+"==== preservim/nerdtree
+nnoremap <leader>n :NERDTreeFocus<CR>
+"nnoremap <C-n> :NERDTree<CR>
+nnoremap <leader>T :NERDTreeToggle<CR>
+nnoremap <leader>F :NERDTreeFind<CR>
 
 "==== fatih/vim-go
 autocmd FileType go map <C-n> :cnext<CR>

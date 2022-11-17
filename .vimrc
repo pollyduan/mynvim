@@ -1,9 +1,11 @@
 syntax on
 set nocompatible
-"set nu
+set list
+set listchars=eol:$,tab:→→,extends:>,precedes:<
+set number
 set relativenumber
-set tabstop=2
-set softtabstop=2
+set tabstop=4
+set softtabstop=4
 set autoindent
 set shiftwidth=2
 set expandtab                 " expand tab to spaces
@@ -39,6 +41,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 call plug#end()
+
+nmap <S-Tab> :bprev<Return>
+nmap <Tab> :bnext<Return>
 
 " gcmt/wildfire.vim
 nmap <leader>s <Plug>(wildfire-quick-select)
